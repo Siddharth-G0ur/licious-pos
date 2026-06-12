@@ -335,3 +335,67 @@ input { font-family: inherit; }
 .ctoc-variant-confirm { background: #c8102e; color: #fff; border: none; border-radius: 8px; padding: 12px 48px; font-size: 14px; font-weight: 700; cursor: pointer; }
 .ctoc-variant-confirm:disabled { background: #ddd; color: #bbb; cursor: not-allowed; }
 .ctoc-variant-confirm:not(:disabled):hover { background: #a80d26; }
+
+/* ── In-Store Address + Delivery Step ── */
+.ctoc-addr-page { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: #f5f5f7; }
+.ctoc-addr-subhdr { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #fff; border-bottom: 1px solid #eee; flex-shrink: 0; }
+.ctoc-addr-subhdr-title { font-size: 15px; font-weight: 700; color: #222; }
+.ctoc-addr-body { flex: 1; overflow-y: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; align-items: start; }
+
+.ctoc-addr-section-title { font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 14px; }
+.ctoc-addr-left { background: #fff; border-radius: 12px; border: 1px solid #e8e8e8; padding: 20px; }
+.ctoc-addr-right { background: #fff; border-radius: 12px; border: 1px solid #e8e8e8; padding: 20px; }
+
+/* Address cards */
+.ctoc-addr-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.ctoc-addr-card { display: flex; align-items: flex-start; gap: 12px; border: 1.5px solid #e0e0e0; border-radius: 10px; padding: 12px 14px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.ctoc-addr-card:hover { border-color: #c8102e; background: #fff9f9; }
+.ctoc-addr-card.selected { border-color: #c8102e; background: #fff5f5; }
+.ctoc-addr-radio { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+.ctoc-addr-card.selected .ctoc-addr-radio { border-color: #c8102e; }
+.ctoc-addr-radio-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8102e; }
+.ctoc-addr-card-body { flex: 1; }
+.ctoc-addr-label { font-size: 10px; font-weight: 700; color: #c8102e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+.ctoc-addr-line1 { font-size: 13px; font-weight: 600; color: #111; }
+.ctoc-addr-line2 { font-size: 12px; color: #777; margin-top: 1px; }
+
+/* Add address button */
+.ctoc-add-addr-btn { width: 100%; border: 1.5px dashed #c8102e; border-radius: 10px; padding: 12px; font-size: 13px; font-weight: 600; color: #c8102e; background: transparent; cursor: pointer; transition: background 0.15s; }
+.ctoc-add-addr-btn:hover { background: #fff5f5; }
+
+/* New address form */
+.ctoc-new-addr-form { border: 1px solid #eee; border-radius: 10px; padding: 16px; margin-top: 4px; }
+.ctoc-addr-form-title { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 12px; }
+.ctoc-form-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+.ctoc-form-label { font-size: 11px; font-weight: 600; color: #666; }
+.ctoc-form-input { border: 1.5px solid #e0e0e0; border-radius: 8px; padding: 9px 12px; font-size: 13px; outline: none; font-family: inherit; color: #222; transition: border-color 0.15s; }
+.ctoc-form-input:focus { border-color: #c8102e; }
+.ctoc-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ctoc-form-cancel-btn { flex: 1; background: #fff; border: 1.5px solid #ddd; border-radius: 8px; padding: 9px; font-size: 13px; font-weight: 600; color: #666; cursor: pointer; }
+.ctoc-form-save-btn { flex: 2; background: #c8102e; border: none; border-radius: 8px; padding: 9px; font-size: 13px; font-weight: 700; color: #fff; cursor: pointer; }
+.ctoc-form-save-btn:disabled { background: #ddd; color: #bbb; cursor: not-allowed; }
+
+/* Delivery method cards */
+.ctoc-delivery-card { display: flex; align-items: flex-start; gap: 12px; border: 1.5px solid #e0e0e0; border-radius: 10px; padding: 14px; cursor: pointer; margin-bottom: 12px; transition: border-color 0.15s, background 0.15s; }
+.ctoc-delivery-card:hover { border-color: #c8102e; background: #fff9f9; }
+.ctoc-delivery-card.selected { border-color: #c8102e; background: #fff5f5; }
+.ctoc-delivery-radio { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+.ctoc-delivery-card.selected .ctoc-delivery-radio { border-color: #c8102e; }
+.ctoc-delivery-name { font-size: 13px; font-weight: 700; color: #111; }
+.ctoc-delivery-sub { font-size: 12px; color: #888; margin-top: 2px; }
+
+/* Confirm button */
+.ctoc-addr-confirm-btn { width: 100%; background: #25d366; color: #fff; border: none; border-radius: 10px; padding: 14px; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 4px; transition: background 0.15s; }
+.ctoc-addr-confirm-btn:hover { background: #1ebe5d; }
+.ctoc-addr-confirm-btn:disabled { background: #ddd; color: #bbb; cursor: not-allowed; }
+
+/* In-store success */
+.ctoc-instore-details { border: 1px solid #eee; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; text-align: left; display: flex; flex-direction: column; gap: 10px; }
+.ctoc-instore-detail-row { display: flex; flex-direction: column; gap: 2px; }
+.ctoc-instore-detail-lbl { font-size: 10px; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; }
+.ctoc-instore-detail-val { font-size: 13px; color: #333; font-weight: 500; }
+.ctoc-wa-btn { width: 100%; background: #25d366; color: #fff; border: none; border-radius: 10px; padding: 14px 20px; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 4px; transition: background 0.15s; }
+.ctoc-wa-btn:hover { background: #1ebe5d; }
+.ctoc-wa-sent { background: #f0fff4; border: 1px solid #b2dfdb; border-radius: 10px; padding: 14px 18px; margin-bottom: 4px; text-align: left; }
+.ctoc-wa-sent-title { font-size: 13px; font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+.ctoc-wa-sent-sub { font-size: 12px; color: #555; line-height: 1.5; }

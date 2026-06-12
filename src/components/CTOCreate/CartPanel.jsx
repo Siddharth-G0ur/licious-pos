@@ -100,7 +100,8 @@ function CartView({ cart, totals, removeFromCart, updateCartWeight, proceedToPay
 }
 
 function PaymentView({ totals }) {
-  const generateLink = useCreateFlowStore(s => s.generateLink);
+  const { orderType, generateLink, proceedToAddress } = useCreateFlowStore();
+  const isInStore = orderType === 'instore';
   return (
     <>
       <div className="ctoc-payment-body">
@@ -123,10 +124,16 @@ function PaymentView({ totals }) {
           <div className="ctoc-net-lbl">Net Payable Amt:</div>
           <div className="ctoc-net-amt">₹{totals.total}</div>
         </div>
-        <button className="ctoc-pay-btn" onClick={generateLink}>
-          Proceed to Pay
-          <div className="ctoc-pay-sublabel">(Via send link)</div>
-        </button>
+        {isInStore ? (
+          <button className="ctoc-pay-btn" onClick={proceedToAddress}>
+            Add Delivery Address
+          </button>
+        ) : (
+          <button className="ctoc-pay-btn" onClick={generateLink}>
+            Proceed to Pay
+            <div className="ctoc-pay-sublabel">(Via send link)</div>
+          </button>
+        )}
       </div>
     </>
   );

@@ -21,10 +21,28 @@ export const CUSTOMER_DB = {
     lastOrder: {
       date: '05/06/26', value: 1240,
       items: [
-        { plu: '178325', name: 'Chicken Breast Boneless', uom: 'Kg',    price: 449, qty: 1.5 },
-        { plu: '876115', name: 'Drumsticks',              uom: 'Kg',    price: 269, qty: 1   },
-        { plu: '700345', name: 'Classic Eggs - Pack Of 12', uom: 'Units', price: 95, qty: 2  },
+        { plu: '178325', name: 'Chicken Breast Boneless',   uom: 'Kg',    price: 449, qty: 1.5 },
+        { plu: '876115', name: 'Drumsticks',                uom: 'Kg',    price: 269, qty: 1   },
+        { plu: '700345', name: 'Classic Eggs - Pack Of 12', uom: 'Units', price: 95,  qty: 2   },
       ],
     },
+    savedAddresses: [
+      { id: 1, label: 'Home',   line1: 'Flat 4B, Rainbow Apartments', line2: 'Koramangala 5th Block, Bengaluru 560095' },
+      { id: 2, label: 'Office', line1: '3rd Floor, WeWork Galaxy',    line2: 'Residency Road, Bengaluru 560025' },
+    ],
+  },
+  '9999999999': {
+    orderCount: 2,
+    lastOrder: {
+      date: '10/06/26', value: 850,
+      items: [
+        { plu: '218639', name: 'Goat Kheema', uom: 'Kg', price: 1349, qty: 0.5 },
+        { plu: '370780', name: 'Goat Liver',  uom: 'Kg', price: 799,  qty: 0.5 },
+      ],
+    },
+    savedAddresses: [
+      { id: 1, label: 'Home',    line1: '12, Seshadri Road',      line2: 'Gandhinagar, Bengaluru 560009' },
+      { id: 2, label: 'Parents', line1: '22, HSR Layout Sector 4', line2: 'HSR Layout, Bengaluru 560102' },
+    ],
   },
 };
