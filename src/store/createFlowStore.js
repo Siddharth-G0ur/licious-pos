@@ -10,7 +10,7 @@ const useCreateFlowStore = create((set, get) => ({
   isGenerating: false,
   phone: '',
   customerData: null,
-  orderType: 'remote',
+  orderType: 'remote1',
 
   cart: [],
   catFilter: 'Chicken',
@@ -31,7 +31,7 @@ const useCreateFlowStore = create((set, get) => ({
 
   open: () => set({
     isOpen: true, step: 1, isGenerating: false,
-    phone: '', customerData: null, orderType: 'remote',
+    phone: '', customerData: null, orderType: 'remote1',
     cart: [], catFilter: 'Chicken', searchQuery: '',
     weightModalPlu: null,
     countdownSecs: 900, pendingOrderId: null,

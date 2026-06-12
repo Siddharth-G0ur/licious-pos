@@ -37,16 +37,19 @@ export default function CustomerStep() {
           <div className="ctoc-order-type-box">
             <div className="ctoc-ot-title">Order type</div>
             <div className="ctoc-ot-options">
-              {['instore', 'remote'].map(t => (
-                <label key={t} className="ctoc-radio-label">
+              {[
+                { value: 'remote1', label: 'Remote Order 1' },
+                { value: 'remote2', label: 'Remote Order 2' },
+              ].map(({ value, label }) => (
+                <label key={value} className="ctoc-radio-label">
                   <input
                     type="radio"
                     name="ctoc-ot"
-                    value={t}
-                    checked={orderType === t}
-                    onChange={() => setOrderType(t)}
+                    value={value}
+                    checked={orderType === value}
+                    onChange={() => setOrderType(value)}
                   />
-                  {t === 'instore' ? 'In-Store Order' : 'Remote Order'}
+                  {label}
                 </label>
               ))}
             </div>

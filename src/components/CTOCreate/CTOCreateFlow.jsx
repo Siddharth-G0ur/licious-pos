@@ -9,7 +9,7 @@ export default function CTOCreateFlow() {
 
   if (!isOpen) return null;
 
-  const isInStore = orderType === 'instore';
+  const isInStore = orderType === 'remote2';
   // Remote:   1 → 2/3 → 4 (success)
   // In-store: 1 → 2/3 → 4 (address+delivery) → 5 (WA success)
   const showAddress = isInStore && step === 4;

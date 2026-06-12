@@ -101,7 +101,7 @@ function CartView({ cart, totals, removeFromCart, updateCartWeight, proceedToPay
 
 function PaymentView({ totals }) {
   const { orderType, generateLink, proceedToAddress } = useCreateFlowStore();
-  const isInStore = orderType === 'instore';
+  const isInStore = orderType === 'remote2';
   return (
     <>
       <div className="ctoc-payment-body">
